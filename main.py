@@ -12,12 +12,12 @@ driver = webdriver.Chrome(service=service)
 driver.get("https://google.com")
 
 WebDriverWait(driver, 5).until(
-    EC.presence_of_element_located((By.CLASS_NAME, "gLFyf"))
+    EC.presence_of_element_located((By.CLASS_NAME,"gLFyf"))
 )
 
-input_element = driver.find_element(By.CLASS_NAME, "gLFyf")
+input_element = driver.find_element(By.CLASS_NAME,"gLFyf")
 input_element.clear()
-input_element.send_keys('Hello, Im Hassan' + Keys.ENTER)
+input_element.send_keys('Hello, Im Hassan'+Keys.ENTER)
 
 time.sleep(5)  # Adjust the sleep duration as needed
 
